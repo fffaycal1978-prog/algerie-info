@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Algeria Info — Le média de référence pour les Algériens, résidents et diaspora. Logement, visa, économie, emploi, tech et sport.">
+  <meta property="og:title" content="Algeria Info — معلومات الجزائر">
+  <meta property="og:description" content="L'info pratique pour les Algériens partout dans le monde">
+  <title>Algeria Info | معلومات الجزائر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+/* ================================
+   ALGERIA INFO — STYLE PRINCIPAL
+   ================================ */
+
+:root {
+  --clr-bg: #F7F5F0;
+  --clr-surface: #FFFFFF;
+  --clr-text: #1A1A1A;
+  --clr-text-muted: #6B6B6B;
+  --clr-border: #E2DDD6;
+  --clr-accent: #C8392B;
+
+  --clr-blue: #1B4F8A;
+  --clr-blue-light: #E8F0FA;
+  --clr-amber: #B45309;
+  --clr-amber-light: #FEF3C7;
+  --clr-green: #166534;
+  --clr-green-light: #DCFCE7;
+  --clr-purple: #5B21B6;
+  --clr-purple-light: #EDE9FE;
+  --clr-pink: #9D174D;
+  --clr-pink-light: #FCE7F3;
+  --clr-teal: #0F766E;
+  --clr-teal-light: #CCFBF1;
+  --clr-red: #991B1B;
+  --clr-red-light: #FEE2E2;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-arabic: 'Noto Naskh Arabic', serif;
+
+  --radius: 8px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.07);
+  --shadow-hover: 0 6px 24px rgba(0,0,0,0.13);
+  --transition: 0.2s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+a { color: inherit; text-decoration: none; }
+
+/* ── HEADER ── */
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--clr-surface); border-bottom: 1px solid var(--clr-border); }
+
+.header-top { border-bottom: 1px solid var(--clr-border); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo-fr {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--clr-accent);
+  letter-spacing: -0.5px;
+}
+
+.logo-divider { color: var(--clr-border); font-size: 20px; }
+
+.logo-ar {
+  font-family: var(--font-arabic);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  direction: rtl;
+}
+
+.main-nav {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.main-nav a:hover {
+  background: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+.lang-toggle {
+  font-family: var(--font-arabic);
+  font-size: 14px;
+  padding: 6px 14px;
+  border: 1.5px solid var(--clr-accent);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--clr-accent);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover { background: var(--clr-accent); color: #fff; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--clr-text);
+  border-radius: 2px;
+}
+
+/* ── TICKER ── */
+.ticker-wrap {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--clr-accent);
+  height: 34px;
+}
+
+.ticker-label {
+  background: #8B0000;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 0 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.ticker-content {
+  display: flex;
+  gap: 0;
+  animation: ticker 30s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-item {
+  color: rgba(255,255,255,0.95);
+  font-size: 12.5px;
+  font-weight: 400;
+  padding: 0 20px;
+}
+
+.ticker-sep {
+  color: rgba(255,255,255,0.4);
+  padding: 0 4px;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── HERO ── */
+.hero { padding: 32px 0; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+.hero-main {
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: box-shadow var(--transition);
+}
+
+.hero-main:hover { box-shadow: var(--shadow-hover); }
+
+.hero-main-img {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+
+.hero-main-img .category-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}
+
+.hero-main-body { padding: 24px 28px 28px; }
+
+.hero-main-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: var(--clr-text);
+}
+
+.hero-main-ar {
+  font-family: var(--font-arabic);
+  font-size: 16px;
+  color: var(--clr-text-muted);
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 12px;
+}
+
+.hero-main-excerpt {
+  font-size: 14px;
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.article-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--clr-text-muted);
+}
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.side-article {
+  display: flex;
+  gap: 14px;
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: box-shadow var(--transition);
+  padding: 12px;
+  align-items: center;
+}
+
+.side-article:hover { box-shadow: var(--shadow-hover); }
+
+.side-img {
+  width: 90px;
+  height: 70px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.side-body h3 {
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 6px 0 4px;
+}
+
+.side-ar {
+  font-family: var(--font-arabic);
+  font-size: 12px;
+  color: var(--clr-text-muted);
+  direction: rtl;
+}
+
+/* ── QUICK BAR ── */
+.quick-bar {
+  background: var(--clr-text);
+  color: #fff;
+  padding: 14px 0;
+}
+
+.quick-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quick-item { display: flex; flex-direction: column; align-items: center; }
+
+.quick-label { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,0.5); }
+
+.quick-value { font-size: 17px; font-weight: 500; color: #fff; margin-top: 2px; }
+
+.quick-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.15); }
+
+/* ── MAIN LAYOUT ── */
+.main-content { padding: 40px 0 60px; }
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ── CATEGORY SECTIONS ── */
+.category-section { margin-bottom: 48px; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-accent {
+  display: block;
+  width: 4px;
+  height: 28px;
+  border-radius: 4px;
+}
+
+.accent-blue { background: var(--clr-blue); }
+.accent-amber { background: var(--clr-amber); }
+.accent-green { background: var(--clr-green); }
+.accent-purple { background: var(--clr-purple); }
+.accent-pink { background: var(--clr-pink); }
+.accent-teal { background: var(--clr-teal); }
+.accent-red { background: var(--clr-red); }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.section-title-ar {
+  font-family: var(--font-arabic);
+  font-size: 16px;
+  color: var(--clr-text-muted);
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.see-all {
+  font-size: 13px;
+  color: var(--clr-accent);
+  font-weight: 500;
+  transition: opacity var(--transition);
+}
+
+.see-all:hover { opacity: 0.7; }
+
+/* ── ARTICLE GRID ── */
+.articles-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.article-card {
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.article-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.card-img {
+  height: 140px;
+  overflow: hidden;
+}
+
+.card-body { padding: 14px; }
+
+.card-body h4 {
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 8px 0 6px;
+}
+
+.card-ar {
+  font-family: var(--font-arabic);
+  font-size: 11.5px;
+  color: var(--clr-text-muted);
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--clr-text-muted);
+}
+
+/* ── BADGES ── */
+.category-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.badge-blue { background: var(--clr-blue-light); color: var(--clr-blue); }
+.badge-amber { background: var(--clr-amber-light); color: var(--clr-amber); }
+.badge-green { background: var(--clr-green-light); color: var(--clr-green); }
+.badge-purple { background: var(--clr-purple-light); color: var(--clr-purple); }
+.badge-pink { background: var(--clr-pink-light); color: var(--clr-pink); }
+.badge-teal { background: var(--clr-teal-light); color: var(--clr-teal); }
+.badge-red { background: var(--clr-red-light); color: var(--clr-red); }
+.badge-sport { background: #FEF9C3; color: #713F12; }
+
+/* ── IMAGE PLACEHOLDERS ── */
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-logement { background: linear-gradient(135deg, #1B4F8A 0%, #2D6BC4 60%, #5B9BD5 100%); }
+.img-logement2 { background: linear-gradient(135deg, #0F3460 0%, #1B4F8A 100%); }
+.img-economie { background: linear-gradient(135deg, #92400E 0%, #B45309 60%, #D97706 100%); }
+.img-economie2 { background: linear-gradient(135deg, #78350F 0%, #92400E 100%); }
+.img-diaspora { background: linear-gradient(135deg, #14532D 0%, #166534 60%, #22C55E 100%); }
+.img-diaspora2 { background: linear-gradient(135deg, #064E3B 0%, #047857 100%); }
+.img-education { background: linear-gradient(135deg, #3B0764 0%, #5B21B6 60%, #7C3AED 100%); }
+.img-education2 { background: linear-gradient(135deg, #2E1065 0%, #4C1D95 100%); }
+.img-sante { background: linear-gradient(135deg, #831843 0%, #9D174D 60%, #DB2777 100%); }
+.img-sante2 { background: linear-gradient(135deg, #701A75 0%, #86198F 100%); }
+.img-emploi { background: linear-gradient(135deg, #0F4C5C 0%, #0F766E 60%, #14B8A6 100%); }
+.img-emploi2 { background: linear-gradient(135deg, #134E4A 0%, #0F766E 100%); }
+.img-tech { background: linear-gradient(135deg, #7F1D1D 0%, #991B1B 60%, #DC2626 100%); }
+.img-tech2 { background: linear-gradient(135deg, #6B1A1A 0%, #7F1D1D 100%); }
+.img-sport { background: linear-gradient(135deg, #3D5A00 0%, #4A7C59 60%, #6DBB8A 100%); }
+.img-sport2 { background: linear-gradient(135deg, #365314 0%, #4D7C0F 100%); }
+
+/* ── SIDEBAR ── */
+.sidebar { display: flex; flex-direction: column; gap: 24px; position: sticky; top: 110px; }
+
+.sidebar-widget {
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.widget-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--clr-accent);
+}
+
+.top-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.top-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.top-list li:hover { opacity: 0.7; }
+
+.top-num {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--clr-border);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.top-list strong { font-size: 13px; display: block; margin-bottom: 4px; }
+
+.top-cat {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ── NEWSLETTER ── */
+.newsletter-widget { background: var(--clr-text); color: #fff; }
+.newsletter-widget .widget-title { color: #fff; border-color: var(--clr-accent); }
+.newsletter-widget p { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 12px; }
+.nl-ar { font-family: var(--font-arabic); direction: rtl; text-align: right; margin-top: 8px; }
+
+.newsletter-form { display: flex; flex-direction: column; gap: 8px; }
+
+.nl-input {
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 13px;
+  font-family: var(--font-body);
+  outline: none;
+}
+
+.nl-input::placeholder { color: rgba(255,255,255,0.4); }
+.nl-input:focus { border-color: var(--clr-accent); }
+
+.nl-btn {
+  padding: 10px;
+  background: var(--clr-accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.nl-btn:hover { opacity: 0.85; }
+
+/* ── CONVERTER ── */
+.conv-row { display: flex; gap: 8px; margin-bottom: 10px; }
+
+.conv-input {
+  flex: 1;
+  padding: 10px;
+  border: 1.5px solid var(--clr-border);
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  outline: none;
+}
+
+.conv-input:focus { border-color: var(--clr-blue); }
+
+.conv-select {
+  padding: 10px;
+  border: 1.5px solid var(--clr-border);
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+}
+
+.conv-result {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--clr-blue);
+}
+
+.conv-note { font-size: 11px; color: var(--clr-text-muted); margin-top: 6px; }
+
+/* ── TAGS CLOUD ── */
+.tags-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag-pill {
+  font-size: 12px;
+  padding: 5px 10px;
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all var(--transition);
+  color: var(--clr-text-muted);
+}
+
+.tag-pill:hover {
+  background: var(--clr-accent);
+  color: #fff;
+  border-color: var(--clr-accent);
+}
+
+/* ── MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-overlay.active { display: flex; align-items: flex-start; justify-content: center; padding-top: 40px; }
+
+.modal-content {
+  background: var(--clr-surface);
+  border-radius: 12px;
+  max-width: 780px;
+  width: 100%;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--clr-bg);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+.modal-close:hover { background: var(--clr-border); }
+
+/* ── ARTICLE CONTENT ── */
+.article-content .art-header { margin-bottom: 28px; }
+.article-content .art-cat { margin-bottom: 10px; }
+.article-content .art-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.article-content .art-title-ar {
+  font-family: var(--font-arabic);
+  font-size: 18px;
+  color: var(--clr-text-muted);
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 14px;
+}
+.article-content .art-meta-bar {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--clr-text-muted);
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--clr-border);
+}
+.article-content .art-img {
+  height: 240px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.article-content .art-body p {
+  margin-bottom: 16px;
+  line-height: 1.8;
+  font-size: 15px;
+}
+.article-content .art-body h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 28px 0 14px;
+  color: var(--clr-text);
+}
+.article-content .art-body h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 10px;
+}
+.article-content .art-body ul, .article-content .art-body ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+.article-content .art-body li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+.article-content .info-box {
+  background: var(--clr-blue-light);
+  border-left: 4px solid var(--clr-blue);
+  border-radius: 0 6px 6px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+.article-content .warning-box {
+  background: var(--clr-amber-light);
+  border-left: 4px solid var(--clr-amber);
+  border-radius: 0 6px 6px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+}
+.article-content th {
+  background: var(--clr-text);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+.article-content td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--clr-border);
+}
+.article-content tr:nth-child(even) td { background: var(--clr-bg); }
+.article-content .art-ar-section {
+  background: var(--clr-bg);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-top: 28px;
+  direction: rtl;
+  text-align: right;
+}
+.article-content .art-ar-section h2 {
+  font-family: var(--font-arabic);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.article-content .art-ar-section p {
+  font-family: var(--font-arabic);
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* ── FOOTER ── */
+.site-footer { background: var(--clr-text); color: rgba(255,255,255,0.8); margin-top: 60px; }
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  padding: 48px 0 36px;
+}
+
+.footer-brand .logo-fr { color: #fff; font-size: 20px; }
+.footer-brand .logo-ar { color: rgba(255,255,255,0.6); }
+.footer-brand p { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 12px; line-height: 1.6; }
+.footer-ar { font-family: var(--font-arabic); direction: rtl; text-align: right; }
+
+.footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.footer-col h4 { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 14px; text-transform: uppercase; letter-spacing: .06em; }
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 8px;
+  transition: color var(--transition);
+}
+
+.footer-col a:hover { color: #fff; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 0;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-side { flex-direction: row; flex-wrap: wrap; }
+  .side-article { flex: 1 1 calc(33% - 12px); }
+  .main-grid { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .main-nav { display: none; }
+  .hamburger { display: flex; }
+  .hero-main-title { font-size: 20px; }
+  .hero-main-img { height: 260px; }
+  .side-article { flex: 1 1 100%; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .footer-links { grid-template-columns: repeat(2, 1fr); }
+  .quick-bar-inner { gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .grid-4 { grid-template-columns: 1fr; }
+  .modal-content { padding: 24px 18px; }
+  .article-content .art-title { font-size: 22px; }
+  .footer-bottom .container { flex-direction: column; gap: 6px; text-align: center; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-fr">Algeria Info</span>
+          <span class="logo-divider">|</span>
+          <span class="logo-ar">معلومات الجزائر</span>
+        </div>
+        <nav class="main-nav">
+          <a href="#logement">Logement</a>
+          <a href="#economie">Économie</a>
+          <a href="#diaspora">Visa / Diaspora</a>
+          <a href="#education">Éducation</a>
+          <a href="#sante">Santé</a>
+          <a href="#emploi">Emploi</a>
+          <a href="#tech">Tech</a>
+          <a href="#sport">Sport</a>
+        </nav>
+        <button class="lang-toggle" onclick="toggleLang()">
+          <span id="lang-label">عربي</span>
+        </button>
+        <button class="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker-label">EN DIRECT</div>
+      <div class="ticker-content">
+        <span class="ticker-item">Euro / marché noir : mise à jour quotidienne</span>
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item">AADL 3 : 1 million de souscripteurs inscrits</span>
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item">Visa Schengen : délais et conseils 2025</span>
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item">Bac 2025 : résultats disponibles en ligne</span>
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item">EN Algérie : prochains matchs et résultats</span>
+        <span class="ticker-sep">·</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <article class="hero-main featured-article" onclick="openArticle('aadl3-guide')">
+          <div class="hero-main-img">
+            <div class="img-placeholder img-logement"></div>
+            <span class="category-badge badge-blue">Logement</span>
+          </div>
+          <div class="hero-main-body">
+            <h1 class="hero-main-title">AADL 3 : tout ce qu'il faut savoir en 2025 — prix, délais et éligibilité</h1>
+            <p class="hero-main-ar">عدل 3 : كل ما تحتاج معرفته في 2025 — السعر والآجال والشروط</p>
+            <p class="hero-main-excerpt">Plus d'un million de souscripteurs attendent leur logement. Nous avons rassemblé toutes les réponses aux questions les plus posées : paiement du premier apport, affectation par wilaya, et situation pour les Algériens de l'étranger.</p>
+            <div class="article-meta">
+              <span class="meta-date">Mis à jour : Avril 2025</span>
+              <span class="meta-read">8 min de lecture</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="hero-side">
+          <article class="side-article" onclick="openArticle('euro-marche-noir')">
+            <div class="side-img"><div class="img-placeholder img-economie"></div></div>
+            <div class="side-body">
+              <span class="category-badge badge-amber">Économie</span>
+              <h3>Cours de l'euro au marché noir — mise à jour quotidienne</h3>
+              <p class="side-ar">سعر اليورو في السوق الموازية اليوم</p>
+            </div>
+          </article>
+          <article class="side-article" onclick="openArticle('visa-schengen')">
+            <div class="side-img"><div class="img-placeholder img-diaspora"></div></div>
+            <div class="side-body">
+              <span class="category-badge badge-green">Visa</span>
+              <h3>Visa Schengen : guide complet 2025, dossier et délais</h3>
+              <p class="side-ar">فيزا شنغن : الدليل الكامل 2025</p>
+            </div>
+          </article>
+          <article class="side-article" onclick="openArticle('bac-2025')">
+            <div class="side-img"><div class="img-placeholder img-education"></div></div>
+            <div class="side-body">
+              <span class="category-badge badge-purple">Éducation</span>
+              <h3>Résultats Bac 2025 : comment consulter vos notes en ligne</h3>
+              <p class="side-ar">نتائج البكالوريا 2025 : كيف تطلع على نتيجتك</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK INFO BAR -->
+  <section class="quick-bar">
+    <div class="container quick-bar-inner">
+      <div class="quick-item">
+        <span class="quick-label">Euro / marché noir</span>
+        <span class="quick-value" id="euro-val">236 DZD</span>
+      </div>
+      <div class="quick-divider"></div>
+      <div class="quick-item">
+        <span class="quick-label">Dollar</span>
+        <span class="quick-value">218 DZD</span>
+      </div>
+      <div class="quick-divider"></div>
+      <div class="quick-item">
+        <span class="quick-label">SNMG 2025</span>
+        <span class="quick-value">24 000 DA</span>
+      </div>
+      <div class="quick-divider"></div>
+      <div class="quick-item">
+        <span class="quick-label">Météo Alger</span>
+        <span class="quick-value">22°C ☀</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES SECTIONS -->
+  <main class="main-content">
+    <div class="container main-grid">
+      <div class="articles-column">
+
+        <!-- LOGEMENT -->
+        <section class="category-section" id="logement">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-accent accent-blue"></span>
+              <h2 class="section-title">Logement <span class="section-title-ar">السكن</span></h2>
+            </div>
+            <a href="#logement" class="see-all">Voir tout →</a>
+          </div>
+          <div class="articles-grid grid-4">
+            <article class="article-card" onclick="openArticle('aadl3-guide')">
+              <div class="card-img"><div class="img-placeholder img-logement"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-blue">Logement</span>
+                <h4>AADL 3 : tout ce qu'il faut savoir (prix, délais, éligibilité)</h4>
+                <p class="card-ar">عدل 3 : كل ما تحتاج معرفته</p>
+                <div class="card-meta"><span>Guide complet</span><span>8 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('prix-immobilier')">
+              <div class="card-img"><div class="img-placeholder img-logement2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-blue">Logement</span>
+                <h4>Prix des appartements à Alger 2025 : par quartier</h4>
+                <p class="card-ar">أسعار الشقق في الجزائر العاصمة حسب الحي</p>
+                <div class="card-meta"><span>Comparatif</span><span>5 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('aadl3-emigres')">
+              <div class="card-img"><div class="img-placeholder img-diaspora"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-blue">Logement</span>
+                <h4>AADL 3 pour les Algériens de l'étranger : peuvent-ils s'inscrire ?</h4>
+                <p class="card-ar">عدل 3 للمغتربين : هل يمكنهم الاشتراك؟</p>
+                <div class="card-meta"><span>Explainer</span><span>4 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('lpp-logement')">
+              <div class="card-img"><div class="img-placeholder img-logement"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-blue">Logement</span>
+                <h4>Logement LPP : conditions, prix et inscription 2025</h4>
+                <p class="card-ar">سكن LPP : الشروط والتسجيل 2025</p>
+                <div class="card-meta"><span>Guide</span><span>5 min</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ÉCONOMIE -->
+        <section class="category-section" id="economie">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-accent accent-amber"></span>
+              <h2 class="section-title">Économie <span class="section-title-ar">الاقتصاد</span></h2>
+            </div>
+            <a href="#economie" class="see-all">Voir tout →</a>
+          </div>
+          <div class="articles-grid grid-4">
+            <article class="article-card" onclick="openArticle('euro-marche-noir')">
+              <div class="card-img"><div class="img-placeholder img-economie"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-amber">Économie</span>
+                <h4>Euro au marché noir aujourd'hui — données quotidiennes</h4>
+                <p class="card-ar">سعر اليورو في السوق الموازية اليوم</p>
+                <div class="card-meta"><span>Données live</span><span>2 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('inflation-2025')">
+              <div class="card-img"><div class="img-placeholder img-economie2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-amber">Économie</span>
+                <h4>Inflation 2025 : quels produits ont le plus augmenté ?</h4>
+                <p class="card-ar">التضخم 2025 : أي المنتجات ارتفع سعرها أكثر؟</p>
+                <div class="card-meta"><span>Analyse</span><span>6 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('dinar-explainer')">
+              <div class="card-img"><div class="img-placeholder img-economie"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-amber">Économie</span>
+                <h4>Dinar vs euro : pourquoi l'écart officiel / marché noir ?</h4>
+                <p class="card-ar">الدينار مقابل اليورو : لماذا الفرق بين السوقين؟</p>
+                <div class="card-meta"><span>Explainer</span><span>5 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('carburant-prix')">
+              <div class="card-img"><div class="img-placeholder img-economie2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-amber">Économie</span>
+                <h4>Prix du carburant en Algérie 2025 (essence, gasoil, GPL)</h4>
+                <p class="card-ar">أسعار الوقود في الجزائر 2025</p>
+                <div class="card-meta"><span>Données</span><span>3 min</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- DIASPORA / VISA -->
+        <section class="category-section" id="diaspora">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-accent accent-green"></span>
+              <h2 class="section-title">Diaspora & Visa <span class="section-title-ar">المغتربون والتأشيرة</span></h2>
+            </div>
+            <a href="#diaspora" class="see-all">Voir tout →</a>
+          </div>
+          <div class="articles-grid grid-4">
+            <article class="article-card" onclick="openArticle('visa-schengen')">
+              <div class="card-img"><div class="img-placeholder img-diaspora"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-green">Visa</span>
+                <h4>Visa Schengen depuis l'Algérie : guide complet 2025</h4>
+                <p class="card-ar">فيزا شنغن من الجزائر : الدليل الكامل 2025</p>
+                <div class="card-meta"><span>Guide complet</span><span>10 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('passeport-france')">
+              <div class="card-img"><div class="img-placeholder img-diaspora2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-green">Diaspora</span>
+                <h4>Renouveler son passeport algérien en France</h4>
+                <p class="card-ar">تجديد جواز السفر الجزائري من فرنسا</p>
+                <div class="card-meta"><span>Guide pas-à-pas</span><span>6 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('transfert-argent')">
+              <div class="card-img"><div class="img-placeholder img-economie"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-green">Diaspora</span>
+                <h4>Envoyer de l'argent en Algérie depuis la France</h4>
+                <p class="card-ar">كيف ترسل المال من فرنسا إلى الجزائر</p>
+                <div class="card-meta"><span>Comparatif</span><span>5 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('visa-canada')">
+              <div class="card-img"><div class="img-placeholder img-diaspora"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-green">Visa</span>
+                <h4>Visa Canada depuis l'Algérie : guide complet 2025</h4>
+                <p class="card-ar">فيزا كندا من الجزائر : الدليل الكامل 2025</p>
+                <div class="card-meta"><span>Guide</span><span>8 min</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ÉDUCATION -->
+        <section class="category-section" id="education">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-accent accent-purple"></span>
+              <h2 class="section-title">Éducation <span class="section-title-ar">التعليم</span></h2>
+            </div>
+            <a href="#education" class="see-all">Voir tout →</a>
+          </div>
+          <div class="articles-grid grid-4">
+            <article class="article-card" onclick="openArticle('bac-2025')">
+              <div class="card-img"><div class="img-placeholder img-education"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-purple">Éducation</span>
+                <h4>Résultats Bac 2025 : comment consulter vos notes en ligne</h4>
+                <p class="card-ar">نتائج البكالوريا 2025</p>
+                <div class="card-meta"><span>Actu urgente</span><span>3 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('inscription-universite')">
+              <div class="card-img"><div class="img-placeholder img-education2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-purple">Éducation</span>
+                <h4>Inscription à l'université en Algérie 2025 : Progres, dates</h4>
+                <p class="card-ar">التسجيل في الجامعة 2025 : المواعيد والإجراءات</p>
+                <div class="card-meta"><span>Guide</span><span>5 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('bourses-etranger')">
+              <div class="card-img"><div class="img-placeholder img-diaspora"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-purple">Éducation</span>
+                <h4>Bourses d'études à l'étranger pour les Algériens : guide 2025</h4>
+                <p class="card-ar">منح الدراسة في الخارج للجزائريين : دليل 2025</p>
+                <div class="card-meta"><span>Guide complet</span><span>7 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('medecine-etranger')">
+              <div class="card-img"><div class="img-placeholder img-sante"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-purple">Éducation</span>
+                <h4>Étudier la médecine à l'étranger : top formations pour Algériens</h4>
+                <p class="card-ar">الطب في الخارج : أفضل الدراسات للطلاب الجزائريين</p>
+                <div class="card-meta"><span>Guide</span><span>6 min</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- SANTÉ -->
+        <section class="category-section" id="sante">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-accent accent-pink"></span>
+              <h2 class="section-title">Santé <span class="section-title-ar">الصحة</span></h2>
+            </div>
+            <a href="#sante" class="see-all">Voir tout →</a>
+          </div>
+          <div class="articles-grid grid-4">
+            <article class="article-card" onclick="openArticle('chifa-guide')">
+              <div class="card-img"><div class="img-placeholder img-sante"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-pink">Santé</span>
+                <h4>Carte Chifa : comment l'obtenir, la renouveler et l'utiliser</h4>
+                <p class="card-ar">بطاقة الشفاء : كيف تحصل عليها وتجددها</p>
+                <div class="card-meta"><span>Guide pratique</span><span>5 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('allocations-familiales')">
+              <div class="card-img"><div class="img-placeholder img-sante2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-pink">Santé</span>
+                <h4>Allocations familiales 2025 : montant et comment en bénéficier</h4>
+                <p class="card-ar">منح عائلية 2025 : المبالغ وكيفية الاستفادة</p>
+                <div class="card-meta"><span>Explainer</span><span>4 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('hopitaux-alger')">
+              <div class="card-img"><div class="img-placeholder img-sante"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-pink">Santé</span>
+                <h4>Meilleurs hôpitaux et cliniques à Alger en 2025</h4>
+                <p class="card-ar">أفضل المستشفيات والعيادات الخاصة في الجزائر العاصمة</p>
+                <div class="card-meta"><span>Comparatif</span><span>5 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('ramadan-2026')">
+              <div class="card-img"><div class="img-placeholder img-sante2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-pink">Santé</span>
+                <h4>Ramadan 2026 en Algérie : dates, horaires prière, conseils</h4>
+                <p class="card-ar">رمضان 2026 : التواريخ وأوقات الصلاة والنصائح</p>
+                <div class="card-meta"><span>Dossier saisonnier</span><span>6 min</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- EMPLOI -->
+        <section class="category-section" id="emploi">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-accent accent-teal"></span>
+              <h2 class="section-title">Emploi <span class="section-title-ar">التوظيف</span></h2>
+            </div>
+            <a href="#emploi" class="see-all">Voir tout →</a>
+          </div>
+          <div class="articles-grid grid-4">
+            <article class="article-card" onclick="openArticle('snmg-2025')">
+              <div class="card-img"><div class="img-placeholder img-emploi"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-teal">Emploi</span>
+                <h4>Salaire minimum (SNMG) 2025 : montant, calcul, droits</h4>
+                <p class="card-ar">الأجر الأدنى 2025 : المبلغ والحقوق</p>
+                <div class="card-meta"><span>Explainer</span><span>4 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('retraite-cnas')">
+              <div class="card-img"><div class="img-placeholder img-emploi2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-teal">Emploi</span>
+                <h4>Calculer sa retraite CNAS en Algérie — simulateur</h4>
+                <p class="card-ar">كيف تحسب معاشك التقاعدي في الصندوق الوطني</p>
+                <div class="card-meta"><span>Outil interactif</span><span>5 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('auto-entreprise')">
+              <div class="card-img"><div class="img-placeholder img-emploi"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-teal">Emploi</span>
+                <h4>Créer une auto-entreprise en Algérie (CNRC, étapes, coûts)</h4>
+                <p class="card-ar">كيف تؤسس مؤسسة فردية في الجزائر</p>
+                <div class="card-meta"><span>Guide pas-à-pas</span><span>7 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('metiers-payes')">
+              <div class="card-img"><div class="img-placeholder img-emploi2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-teal">Emploi</span>
+                <h4>Les 10 métiers les mieux payés en Algérie en 2025</h4>
+                <p class="card-ar">أكثر 10 مهن دفعاً للأجور في الجزائر 2025</p>
+                <div class="card-meta"><span>Dossier</span><span>6 min</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- TECH -->
+        <section class="category-section" id="tech">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-accent accent-red"></span>
+              <h2 class="section-title">Tech & IA <span class="section-title-ar">التكنولوجيا</span></h2>
+            </div>
+            <a href="#tech" class="see-all">Voir tout →</a>
+          </div>
+          <div class="articles-grid grid-4">
+            <article class="article-card" onclick="openArticle('chatgpt-algerie')">
+              <div class="card-img"><div class="img-placeholder img-tech"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-red">Tech</span>
+                <h4>ChatGPT en Algérie : comment l'utiliser gratuitement</h4>
+                <p class="card-ar">ChatGPT في الجزائر : كيف تستعمله مجاناً</p>
+                <div class="card-meta"><span>Tutoriel</span><span>5 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('tiktok-gagner')">
+              <div class="card-img"><div class="img-placeholder img-tech2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-red">Tech</span>
+                <h4>TikTok & Instagram en Algérie : comment gagner de l'argent</h4>
+                <p class="card-ar">تيك توك وإنستغرام : كيف تربح المال</p>
+                <div class="card-meta"><span>Guide</span><span>6 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('5g-algerie')">
+              <div class="card-img"><div class="img-placeholder img-tech"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-red">Tech</span>
+                <h4>5G en Algérie : quand arrive-t-elle vraiment ? État des lieux</h4>
+                <p class="card-ar">الجيل الخامس في الجزائر : متى يصل فعلاً؟</p>
+                <div class="card-meta"><span>Dossier</span><span>5 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('operateurs-comparatif')">
+              <div class="card-img"><div class="img-placeholder img-tech2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-red">Tech</span>
+                <h4>Djezzy, Mobilis ou Ooredoo : quel opérateur choisir en 2025 ?</h4>
+                <p class="card-ar">جيزي أم موبيليس أم أوريدو : من تختار؟</p>
+                <div class="card-meta"><span>Comparatif</span><span>4 min</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- SPORT -->
+        <section class="category-section" id="sport">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-accent accent-green"></span>
+              <h2 class="section-title">Sport <span class="section-title-ar">الرياضة</span></h2>
+            </div>
+            <a href="#sport" class="see-all">Voir tout →</a>
+          </div>
+          <div class="articles-grid grid-4">
+            <article class="article-card" onclick="openArticle('en-algerie-matchs')">
+              <div class="card-img"><div class="img-placeholder img-sport"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-sport">Sport</span>
+                <h4>Équipe nationale d'Algérie : calendrier des matchs 2025</h4>
+                <p class="card-ar">المنتخب الوطني : برنامج المباريات 2025</p>
+                <div class="card-meta"><span>Actu sport</span><span>3 min</span></div>
+              </div>
+            </article>
+            <article class="article-card" onclick="openArticle('l1-classement')">
+              <div class="card-img"><div class="img-placeholder img-sport2"></div></div>
+              <div class="card-body">
+                <span class="category-badge badge-sport">Sport</span>
+                <h4>Ligue 1 algérienne 2025 : classement et résultats</h4>
+                <p class="card-ar">الرابطة المحترفة الأولى 2025 : الترتيب والنتائج</p>
+                <div class="card-meta"><span>Actu sport</span><span>3 min</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Articles les plus lus</h3>
+          <ol class="top-list">
+            <li onclick="openArticle('visa-schengen')"><span class="top-num">01</span><div><strong>Visa Schengen : guide complet 2025</strong><span class="top-cat badge-green">Visa</span></div></li>
+            <li onclick="openArticle('aadl3-guide')"><span class="top-num">02</span><div><strong>AADL 3 : tout ce qu'il faut savoir</strong><span class="top-cat badge-blue">Logement</span></div></li>
+            <li onclick="openArticle('euro-marche-noir')"><span class="top-num">03</span><div><strong>Euro au marché noir — aujourd'hui</strong><span class="top-cat badge-amber">Économie</span></div></li>
+            <li onclick="openArticle('chatgpt-algerie')"><span class="top-num">04</span><div><strong>ChatGPT en Algérie : tuto gratuit</strong><span class="top-cat badge-red">Tech</span></div></li>
+            <li onclick="openArticle('bac-2025')"><span class="top-num">05</span><div><strong>Résultats Bac 2025</strong><span class="top-cat badge-purple">Éducation</span></div></li>
+          </ol>
+        </div>
+
+        <div class="sidebar-widget newsletter-widget">
+          <h3 class="widget-title">Newsletter hebdo</h3>
+          <p>Les 5 infos qui comptent pour les Algériens, chaque dimanche.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="votre@email.com" class="nl-input">
+            <button class="nl-btn">S'abonner</button>
+          </div>
+          <p class="nl-ar">النشرة الأسبوعية للجزائريين في كل مكان</p>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Convertisseur DZD</h3>
+          <div class="converter">
+            <div class="conv-row">
+              <input type="number" id="conv-input" value="100" class="conv-input" oninput="convertCurrency()">
+              <select id="conv-from" class="conv-select" onchange="convertCurrency()">
+                <option value="eur">EUR €</option>
+                <option value="usd">USD $</option>
+                <option value="gbp">GBP £</option>
+              </select>
+            </div>
+            <div class="conv-result" id="conv-result">= 23 600 DZD</div>
+            <p class="conv-note">Taux marché noir estimé</p>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Sujets tendance</h3>
+          <div class="tags-cloud">
+            <span class="tag-pill" onclick="openArticle('aadl3-guide')">#AADL3</span>
+            <span class="tag-pill" onclick="openArticle('visa-schengen')">#VisaSchengen</span>
+            <span class="tag-pill" onclick="openArticle('euro-marche-noir')">#EuroAujourdHui</span>
+            <span class="tag-pill" onclick="openArticle('chatgpt-algerie')">#ChatGPT</span>
+            <span class="tag-pill" onclick="openArticle('bac-2025')">#Bac2025</span>
+            <span class="tag-pill" onclick="openArticle('snmg-2025')">#SNMG2025</span>
+            <span class="tag-pill" onclick="openArticle('en-algerie-matchs')">#ENAlgerie</span>
+            <span class="tag-pill" onclick="openArticle('chifa-guide')">#Chifa</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ARTICLE MODAL -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeArticle()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeArticle()">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-fr">Algeria Info</span>
+          <span class="logo-divider">|</span>
+          <span class="logo-ar">معلومات الجزائر</span>
+        </div>
+        <p>Le média pratique pour les Algériens, résidents et diaspora.</p>
+        <p class="footer-ar">الإعلام العملي للجزائريين في الداخل والخارج</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Rubriques</h4>
+          <a href="#logement">Logement</a>
+          <a href="#economie">Économie</a>
+          <a href="#diaspora">Visa & Diaspora</a>
+          <a href="#education">Éducation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Plus</h4>
+          <a href="#sante">Santé</a>
+          <a href="#emploi">Emploi</a>
+          <a href="#tech">Tech & IA</a>
+          <a href="#sport">Sport</a>
+        </div>
+        <div class="footer-col">
+          <h4>À propos</h4>
+          <a href="#">Qui sommes-nous</a>
+          <a href="#">Contact</a>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Mentions légales</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2025 Algeria Info — معلومات الجزائر</span>
+        <span>Fait avec ❤ pour les Algériens du monde entier</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+/* ================================
+   ALGERIA INFO — JAVASCRIPT
+   ================================ */
+
+// ── Currency Converter ──
+const RATES = { eur: 236, usd: 218, gbp: 278 };
+
+function convertCurrency() {
+  const val = parseFloat(document.getElementById('conv-input').value) || 0;
+  const from = document.getElementById('conv-from').value;
+  const result = Math.round(val * RATES[from]);
+  document.getElementById('conv-result').textContent =
+    '= ' + result.toLocaleString('fr-DZ') + ' DZD';
+}
+
+// ── Mobile Menu ──
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  nav.style.flexDirection = 'column';
+  nav.style.position = 'absolute';
+  nav.style.top = '100%';
+  nav.style.left = '0';
+  nav.style.right = '0';
+  nav.style.background = '#fff';
+  nav.style.padding = '12px 20px';
+  nav.style.borderBottom = '1px solid #E2DDD6';
+  nav.style.zIndex = '200';
+}
+
+// ── Lang Toggle ──
+let isAr = false;
+function toggleLang() {
+  isAr = !isAr;
+  document.getElementById('lang-label').textContent = isAr ? 'Français' : 'عربي';
+  document.documentElement.setAttribute('lang', isAr ? 'ar' : 'fr');
+}
+
+// ── Modal ──
+function openArticle(id) {
+  const article = ARTICLES[id];
+  if (!article) return;
+  document.getElementById('modal-body').innerHTML = renderArticle(article);
+  document.getElementById('modal-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeArticle() {
+  document.getElementById('modal-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeArticle();
+});
+
+function renderArticle(a) {
+  return `
+    <div class="article-content">
+      <div class="art-header">
+        <div class="art-cat"><span class="category-badge ${a.badgeClass}">${a.category}</span></div>
+        <h1 class="art-title">${a.title}</h1>
+        <p class="art-title-ar">${a.titleAr}</p>
+        <div class="art-meta-bar">
+          <span>📅 ${a.date}</span>
+          <span>⏱ ${a.readTime}</span>
+          <span>✍ Algeria Info</span>
+        </div>
+      </div>
+      <div class="art-img"><div class="img-placeholder ${a.imgClass}"></div></div>
+      <div class="art-body">
+        ${a.content}
+      </div>
+      <div class="art-ar-section">
+        <h2>${a.arTitle}</h2>
+        <p>${a.arSummary}</p>
+      </div>
+    </div>
+  `;
+}
+
+// ── ARTICLES DATABASE ──
+const ARTICLES = {
+
+  'aadl3-guide': {
+    title: "AADL 3 : tout ce qu'il faut savoir en 2025 — prix, délais et éligibilité",
+    titleAr: "عدل 3 : كل ما تحتاج معرفته في 2025 — السعر والآجال والشروط",
+    category: "Logement",
+    badgeClass: "badge-blue",
+    imgClass: "img-logement",
+    date: "Mis à jour : Avril 2025",
+    readTime: "8 min de lecture",
+    arTitle: "ملخص عربي — برنامج عدل 3",
+    arSummary: "برنامج عدل 3 هو برنامج سكن بالإيجار مع خيار الشراء، مخصص للفئات المتوسطة الدخل. يمكن للمقيمين في الجزائر والمغتربين التسجيل عبر الموقع الإلكتروني الرسمي. قيمة الإيجار تتراوح بين 3000 و7000 دينار شهرياً حسب الولاية ونوع الشقة.",
+    content: `
+      <p>Le programme AADL 3 (Agence Nationale de l'Amélioration et du Développement du Logement) est le programme de logement le plus attendu par les Algériens. Plus d'un million de souscripteurs sont en attente d'une affectation. Voici tout ce qu'il faut savoir.</p>
+
+      <h2>Qu'est-ce que l'AADL 3 ?</h2>
+      <p>L'AADL 3 est un programme de logement en <strong>location-vente</strong>, c'est-à-dire que vous payez un loyer mensuel pendant une durée déterminée, puis le logement vous appartient entièrement. Ce n'est ni une vente classique, ni un loyer ordinaire : c'est un investissement progressif dans votre bien immobilier.</p>
+
+      <div class="info-box">
+        💡 <strong>Bon à savoir :</strong> Le programme AADL 3 s'adresse aux foyers dont le revenu mensuel est inférieur à 12 fois le SNMG (salaire minimum), soit environ 288 000 DA en 2025.
+      </div>
+
+      <h2>Prix et mensualités 2025</h2>
+      <table>
+        <thead><tr><th>Type de logement</th><th>Surface</th><th>Mensualité estimée</th><th>Apport initial</th></tr></thead>
+        <tbody>
+          <tr><td>F3 (3 pièces)</td><td>70 m²</td><td>3 500 – 4 500 DA</td><td>520 000 DA</td></tr>
+          <tr><td>F4 (4 pièces)</td><td>90 m²</td><td>4 500 – 6 000 DA</td><td>650 000 DA</td></tr>
+          <tr><td>F5 (5 pièces)</td><td>110 m²</td><td>6 000 – 8 000 DA</td><td>780 000 DA</td></tr>
+        </tbody>
+      </table>
+      <p>Ces montants varient selon la wilaya et la zone géographique. Alger et Oran sont généralement plus élevées que les wilayas de l'intérieur.</p>
+
+      <h2>Conditions d'éligibilité</h2>
+      <ul>
+        <li>Être de nationalité algérienne</li>
+        <li>Avoir plus de 21 ans</li>
+        <li>Ne pas être propriétaire d'un logement ou l'avoir été dans les 5 dernières années</li>
+        <li>Avoir un revenu mensuel inférieur à 12 fois le SNMG</li>
+        <li>Ne pas avoir bénéficié d'une aide à l'habitat public auparavant</li>
+      </ul>
+
+      <h2>Comment s'inscrire ?</h2>
+      <ol>
+        <li>Rendez-vous sur le site officiel : <strong>www.aadl.com.dz</strong></li>
+        <li>Cliquez sur "Souscription AADL 3"</li>
+        <li>Remplissez le formulaire avec vos informations personnelles</li>
+        <li>Téléversez les documents requis (acte de naissance, attestation de travail, fiche de salaire)</li>
+        <li>Payez le premier versement en ligne ou auprès d'une banque agréée</li>
+        <li>Conservez votre numéro de dossier pour le suivi</li>
+      </ol>
+
+      <div class="warning-box">
+        ⚠️ <strong>Attention :</strong> Méfiez-vous des intermédiaires et des sites non officiels qui prétendent accélérer votre dossier. Seul le site officiel aadl.com.dz est valide. Ne payez jamais de frais supplémentaires à des tiers.
+      </div>
+
+      <h2>Et pour les Algériens de l'étranger ?</h2>
+      <p>Les Algériens résidant à l'étranger (ARE) peuvent s'inscrire à l'AADL 3, mais sous certaines conditions spécifiques. Ils doivent notamment fournir une attestation consulaire et justifier de revenus dans le pays de résidence. Un article dédié couvre ce sujet en détail.</p>
+
+      <h2>Délais d'affectation</h2>
+      <p>Les délais varient énormément selon la wilaya choisie et le nombre de souscripteurs. En moyenne, il faut compter <strong>entre 2 et 5 ans</strong> entre la souscription et la réception du logement, selon les chantiers en cours dans votre zone.</p>
+    `
+  },
+
+  'visa-schengen': {
+    title: "Visa Schengen depuis l'Algérie : guide complet 2025",
+    titleAr: "فيزا شنغن من الجزائر : الدليل الكامل 2025",
+    category: "Visa / Diaspora",
+    badgeClass: "badge-green",
+    imgClass: "img-diaspora",
+    date: "Mis à jour : Mars 2025",
+    readTime: "10 min de lecture",
+    arTitle: "ملخص عربي — فيزا شنغن من الجزائر",
+    arSummary: "تأشيرة شنغن تسمح لك بالسفر إلى 27 دولة أوروبية. لطلبها من الجزائر، تحتاج إلى جواز سفر ساري المفعول، وثائق مالية، تأمين سفر، وتوضيح غرض الزيارة. يستغرق معالجة الطلب في العادة من 15 إلى 30 يوماً. احجز موعدك في السفارة المعنية مبكراً.",
+    content: `
+      <p>Le visa Schengen permet de voyager librement dans 27 pays européens. Pour les Algériens, c'est souvent un parcours complexe — mais avec le bon dossier et les bonnes informations, le taux de succès est bien plus élevé qu'on ne le croit.</p>
+
+      <h2>Quel type de visa Schengen choisir ?</h2>
+      <table>
+        <thead><tr><th>Type</th><th>Durée</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td>Type C court séjour</td><td>Max 90 jours / 180 jours</td><td>Tourisme, famille, affaires</td></tr>
+          <tr><td>Transit aéroportuaire</td><td>Escale seulement</td><td>Transit sans entrer dans l'espace Schengen</td></tr>
+          <tr><td>Visa national (D)</td><td>Plus de 90 jours</td><td>Études, travail longue durée</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Les documents obligatoires</h2>
+      <ul>
+        <li><strong>Formulaire de demande</strong> rempli et signé</li>
+        <li><strong>Passeport biométrique</strong> valable au moins 3 mois après la date de retour prévue</li>
+        <li><strong>2 photos</strong> d'identité récentes (format Schengen)</li>
+        <li><strong>Assurance voyage</strong> couvrant au moins 30 000 € et valable dans tout l'espace Schengen</li>
+        <li><strong>Réservation d'hôtel</strong> ou invitation d'un hébergeur (avec justificatif)</li>
+        <li><strong>Billet d'avion aller-retour</strong> ou itinéraire de vol confirmé</li>
+        <li><strong>Justificatifs financiers</strong> : 3 derniers relevés bancaires, attestation de salaire</li>
+        <li><strong>Congé accordé</strong> par l'employeur (si salarié)</li>
+      </ul>
+
+      <div class="info-box">
+        💡 <strong>Astuce :</strong> Demandez le visa auprès de l'ambassade du pays où vous passerez le plus de nuits. Si vous séjournez autant dans plusieurs pays, demandez le visa auprès du pays d'entrée.
+      </div>
+
+      <h2>Procédure étape par étape</h2>
+      <ol>
+        <li>Choisissez l'ambassade compétente (pays principal du séjour)</li>
+        <li>Prenez rendez-vous sur le site VFS Global ou TLScontact (selon le pays)</li>
+        <li>Préparez votre dossier complet en original et copies</li>
+        <li>Déposez votre dossier à la date du rendez-vous et payez les frais (80 €)</li>
+        <li>Suivez votre dossier en ligne avec le numéro de suivi fourni</li>
+        <li>Récupérez votre passeport (avec ou sans visa) sous 15 à 30 jours</li>
+      </ol>
+
+      <h2>Frais consulaires 2025</h2>
+      <table>
+        <thead><tr><th>Catégorie</th><th>Frais</th></tr></thead>
+        <tbody>
+          <tr><td>Adulte</td><td>80 €</td></tr>
+          <tr><td>Enfant (6 à 12 ans)</td><td>40 €</td></tr>
+          <tr><td>Enfant moins de 6 ans</td><td>Gratuit</td></tr>
+          <tr><td>Frais de service VFS/TLS</td><td>25 – 35 € supplémentaires</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Pourquoi les visas sont refusés ?</h2>
+      <ul>
+        <li>Dossier financier insuffisant (pas assez de liquidités prouvées)</li>
+        <li>Manque de liens avec l'Algérie (emploi stable, famille, bien immobilier)</li>
+        <li>Incohérence dans les documents fournis</li>
+        <li>Historique de refus ou d'infractions migratoires</li>
+        <li>Assurance voyage non conforme</li>
+      </ul>
+
+      <div class="warning-box">
+        ⚠️ En cas de refus, vous recevrez une lettre avec le motif. Vous pouvez contester la décision dans les 30 jours. Un article dédié explique comment contester efficacement un refus de visa.
+      </div>
+    `
+  },
+
+  'euro-marche-noir': {
+    title: "Cours de l'euro au marché noir aujourd'hui — données et explications",
+    titleAr: "سعر اليورو في السوق الموازية اليوم — البيانات والتفسيرات",
+    category: "Économie",
+    badgeClass: "badge-amber",
+    imgClass: "img-economie",
+    date: "Mis à jour : Quotidiennement",
+    readTime: "3 min de lecture",
+    arTitle: "ملخص عربي — سعر الصرف في السوق الموازية",
+    arSummary: "سعر الصرف في السوق الموازية يُعبّر عن الفارق بين السعر الرسمي للبنك المركزي وسعر السوق الحرة. اليوم، يتراوح سعر اليورو بين 230 و240 ديناراً في السوق الموازية مقابل 145 ديناراً في البنوك الرسمية. هذا الفارق ناجم عن قيود الصرف الأجنبي المفروضة على المعاملات.",
+    content: `
+      <p>Le cours de l'euro sur le marché parallèle (marché noir) est l'une des recherches les plus effectuées par les Algériens chaque jour. Voici les données actuelles et une explication claire du phénomène.</p>
+
+      <h2>Taux du jour (estimation)</h2>
+      <table>
+        <thead><tr><th>Devise</th><th>Taux officiel (Banque d'Algérie)</th><th>Taux marché parallèle</th><th>Écart</th></tr></thead>
+        <tbody>
+          <tr><td>Euro (€)</td><td>145 – 148 DA</td><td>230 – 240 DA</td><td>+60%</td></tr>
+          <tr><td>Dollar ($)</td><td>135 – 137 DA</td><td>215 – 225 DA</td><td>+58%</td></tr>
+          <tr><td>Livre sterling (£)</td><td>172 – 175 DA</td><td>268 – 278 DA</td><td>+58%</td></tr>
+          <tr><td>Franc suisse (CHF)</td><td>152 – 155 DA</td><td>240 – 250 DA</td><td>+59%</td></tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        ⚠️ <strong>Rappel légal :</strong> Le change de devises en dehors des circuits bancaires officiels est illégal en Algérie et passible de poursuites judiciaires. Ces informations sont fournies à titre informatif et éducatif uniquement.
+      </div>
+
+      <h2>Pourquoi existe-t-il un marché parallèle ?</h2>
+      <p>Le marché parallèle des devises existe en raison des <strong>restrictions sur le change officiel</strong> imposées par la Banque d'Algérie. Les particuliers ont des difficultés à acheter des devises étrangères librement auprès des banques, notamment pour :</p>
+      <ul>
+        <li>Les voyages à l'étranger (plafond annuel limité)</li>
+        <li>Les envois d'argent à des proches à l'étranger</li>
+        <li>Les achats en ligne sur des plateformes internationales</li>
+        <li>Les investissements à l'étranger</li>
+      </ul>
+
+      <h2>Dinar algérien : tendance 2024-2025</h2>
+      <p>Le dinar a subi une dépréciation progressive depuis plusieurs années. En 2020, l'euro s'échangeait autour de 160 DA sur le marché parallèle. En 2025, il dépasse les 230 DA, ce qui représente une dépréciation de près de 45% en 5 ans.</p>
+
+      <div class="info-box">
+        📊 <strong>Facteurs qui influencent le taux :</strong> le prix du pétrole (principale source de devises de l'Algérie), la politique monétaire de la Banque d'Algérie, et la demande de devises par les ménages algériens.
+      </div>
+
+      <h2>Comment envoyer de l'argent légalement vers l'Algérie ?</h2>
+      <p>Les Algériens de la diaspora peuvent envoyer de l'argent via des canaux légaux : Western Union, Money Gram, virements bancaires SWIFT, ou la carte EDAHABIA de Algérie Poste. Ces services offrent des taux légèrement inférieurs au marché parallèle mais garantissent la sécurité de la transaction.</p>
+    `
+  },
+
+  'bac-2025': {
+    title: "Résultats Bac 2025 Algérie : comment consulter vos notes en ligne",
+    titleAr: "نتائج البكالوريا 2025 الجزائر : كيف تطلع على نتيجتك بالإنترنت",
+    category: "Éducation",
+    badgeClass: "badge-purple",
+    imgClass: "img-education",
+    date: "Mis à jour : Juin 2025",
+    readTime: "3 min de lecture",
+    arTitle: "ملخص عربي — نتائج البكالوريا 2025",
+    arSummary: "تُعلَن نتائج البكالوريا في الجزائر عادةً في شهر يوليو. يمكن الاطلاع على النتائج عبر موقع الديوان الوطني للامتحانات والمسابقات onec.dz أو عبر رسالة SMS برقم تسجيلك.",
+    content: `
+      <p>Les résultats du baccalauréat 2025 sont très attendus par des centaines de milliers de familles algériennes. Voici comment les consulter rapidement, où que vous soyez en Algérie ou à l'étranger.</p>
+
+      <h2>Date officielle de publication des résultats</h2>
+      <p>Les résultats du Bac 2025 sont généralement annoncés entre le <strong>15 et le 25 juillet 2025</strong>. La date exacte est communiquée par le ministère de l'Éducation nationale quelques jours avant.</p>
+
+      <h2>Méthodes pour consulter ses résultats</h2>
+
+      <h3>1. Site officiel du ONEC</h3>
+      <ol>
+        <li>Rendez-vous sur <strong>www.onec.dz</strong></li>
+        <li>Cliquez sur "Résultats du Baccalauréat 2025"</li>
+        <li>Entrez votre <strong>numéro d'inscription</strong> et votre <strong>date de naissance</strong></li>
+        <li>Cliquez sur "Rechercher" pour afficher votre résultat</li>
+      </ol>
+
+      <div class="info-box">
+        💡 <strong>Conseil :</strong> Le site peut être saturé le jour de l'annonce. Essayez tôt le matin (avant 8h) ou très tard le soir. En cas d'impossibilité, utilisez l'une des méthodes alternatives ci-dessous.
+      </div>
+
+      <h3>2. Par SMS</h3>
+      <p>Envoyez votre <strong>numéro d'inscription au Bac</strong> par SMS au numéro officiel communiqué par le ministère (généralement <strong>3205</strong> ou <strong>1055</strong>). Vous recevrez votre résultat en quelques minutes.</p>
+
+      <h3>3. Application mobile</h3>
+      <p>L'application "Bac Algérie" (disponible sur Google Play et App Store) permet également de consulter les résultats directement sur smartphone.</p>
+
+      <h3>4. Centres d'examens</h3>
+      <p>Les résultats sont également affichés dans tous les centres d'examen à travers le territoire national.</p>
+
+      <h2>Que faire après les résultats ?</h2>
+      <table>
+        <thead><tr><th>Résultat</th><th>Prochaine étape</th><th>Délai</th></tr></thead>
+        <tbody>
+          <tr><td>Reçu (mention passable ou +)</td><td>S'inscrire sur Progres.mesrs.dz pour l'université</td><td>Juillet-Août</td></tr>
+          <tr><td>Reçu avec mention Bien/TB</td><td>Candidature classes prépa, grandes écoles</td><td>Immédiatement</td></tr>
+          <tr><td>Non reçu (entre 8 et 10)</td><td>Inscription session rattrapage</td><td>1-2 semaines après</td></tr>
+          <tr><td>Non reçu (moins de 8)</td><td>Redoublement ou formation professionnelle</td><td>Septembre</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Inscription à l'université après le Bac</h2>
+      <p>Une fois reçu, l'orientation universitaire se fait automatiquement via la plateforme <strong>Progres</strong> (progres.mesrs.dz). Vous pourrez exprimer vos vœux d'orientation et serez affecté selon votre moyenne et les places disponibles. Un article complet sur l'inscription universitaire est disponible sur notre site.</p>
+    `
+  },
+
+  'chatgpt-algerie': {
+    title: "ChatGPT en Algérie : comment l'utiliser gratuitement en 2025 (tutoriel complet)",
+    titleAr: "ChatGPT في الجزائر : كيف تستعمله مجاناً في 2025 (دليل كامل)",
+    category: "Tech & IA",
+    badgeClass: "badge-red",
+    imgClass: "img-tech",
+    date: "Mis à jour : Janvier 2025",
+    readTime: "5 min de lecture",
+    arTitle: "ملخص عربي — كيف تستعمل ChatGPT في الجزائر",
+    arSummary: "ChatGPT هو مساعد ذكاء اصطناعي من شركة OpenAI. يمكن استخدامه مجاناً من الجزائر عبر الموقع chat.openai.com دون الحاجة إلى VPN. فقط أنشئ حساباً ببريدك الإلكتروني وابدأ.",
+    content: `
+      <p>ChatGPT est l'outil d'intelligence artificielle le plus utilisé au monde, et l'Algérie ne fait pas exception : des millions d'Algériens l'utilisent déjà pour traduire, rédiger, apprendre et résoudre des problèmes. Voici comment en profiter gratuitement.</p>
+
+      <h2>ChatGPT est-il accessible depuis l'Algérie ?</h2>
+      <p>Oui, <strong>ChatGPT est accessible depuis l'Algérie sans restriction</strong>. Aucun VPN n'est nécessaire. Vous pouvez l'utiliser directement depuis votre navigateur ou smartphone, en arabe, en français ou en darija.</p>
+
+      <h2>Créer un compte gratuitement — étape par étape</h2>
+      <ol>
+        <li>Allez sur <strong>chat.openai.com</strong> (ou téléchargez l'application officielle ChatGPT)</li>
+        <li>Cliquez sur <strong>"Sign up"</strong> (S'inscrire)</li>
+        <li>Entrez votre adresse email (Gmail, Yahoo, Outlook, etc.)</li>
+        <li>Créez un mot de passe sécurisé</li>
+        <li>Vérifiez votre email en cliquant sur le lien de confirmation</li>
+        <li>Commencez à utiliser ChatGPT gratuitement !</li>
+      </ol>
+
+      <div class="info-box">
+        💡 <strong>La version gratuite (GPT-3.5)</strong> est suffisante pour la plupart des usages quotidiens. La version payante (ChatGPT Plus, ~20 $/mois) donne accès à GPT-4 qui est plus puissant, mais nécessite une carte bancaire internationale.
+      </div>
+
+      <h2>Comment payer ChatGPT Plus depuis l'Algérie ?</h2>
+      <p>Pour accéder à la version payante, il vous faut une carte bancaire internationale. Plusieurs solutions existent pour les Algériens :</p>
+      <ul>
+        <li><strong>Carte CIB Internationalisée</strong> (demandez auprès de votre banque)</li>
+        <li><strong>Carte prépayée Visa/Mastercard</strong> disponible dans certaines banques algériennes</li>
+        <li><strong>Compte PayPal</strong> rechargé via un tiers de confiance</li>
+        <li>Passer par un proche à l'étranger qui possède une carte valide</li>
+      </ul>
+
+      <h2>10 usages pratiques pour les Algériens</h2>
+      <ol>
+        <li><strong>Traduction</strong> arabe ↔ français ↔ anglais instantanée et précise</li>
+        <li><strong>Rédiger un CV</strong> et une lettre de motivation professionnels</li>
+        <li><strong>Préparer un entretien</strong> d'embauche avec des questions simulées</li>
+        <li><strong>Aide aux devoirs</strong> pour les lycéens (maths, physique, langues)</li>
+        <li><strong>Créer du contenu</strong> pour les réseaux sociaux en darija ou en arabe</li>
+        <li><strong>Rédiger une demande</strong> administrative ou une réclamation</li>
+        <li><strong>Apprendre une langue</strong> étrangère par conversation</li>
+        <li><strong>Résoudre des problèmes de code</strong> pour les développeurs</li>
+        <li><strong>Créer un business plan</strong> ou un projet entrepreneurial</li>
+        <li><strong>Comparer des contrats</strong> ou des offres (assurance, logement...)</li>
+      </ol>
+
+      <h2>Alternatives gratuites à ChatGPT</h2>
+      <table>
+        <thead><tr><th>Outil</th><th>Avantage</th><th>Accès</th></tr></thead>
+        <tbody>
+          <tr><td>Claude (Anthropic)</td><td>Meilleur en rédaction et analyse</td><td>claude.ai — gratuit</td></tr>
+          <tr><td>Gemini (Google)</td><td>Intégré à Gmail et Google Docs</td><td>gemini.google.com</td></tr>
+          <tr><td>Copilot (Microsoft)</td><td>Intégré à Windows et Edge</td><td>copilot.microsoft.com</td></tr>
+          <tr><td>Perplexity</td><td>Recherche web avec sources citées</td><td>perplexity.ai</td></tr>
+        </tbody>
+      </table>
+    `
+  },
+
+  'chifa-guide': {
+    title: "Carte Chifa : comment l'obtenir, la renouveler et l'utiliser en 2025",
+    titleAr: "بطاقة الشفاء : كيف تحصل عليها وتجددها وتستخدمها في 2025",
+    category: "Santé",
+    badgeClass: "badge-pink",
+    imgClass: "img-sante",
+    date: "Mis à jour : Février 2025",
+    readTime: "5 min de lecture",
+    arTitle: "ملخص عربي — بطاقة الشفاء",
+    arSummary: "بطاقة الشفاء هي بطاقة الضمان الاجتماعي الإلكترونية في الجزائر. تتيح لك الاستفادة من تغطية نفقات العلاج والأدوية. للحصول عليها، يجب التوجه إلى الوكالة المحلية للضمان الاجتماعي مع وثائق الهوية وآخر وصل اشتراك.",
+    content: `
+      <p>La carte Chifa est la carte électronique de la sécurité sociale algérienne. Elle vous permet d'accéder aux remboursements de médicaments et de soins médicaux dans toute l'Algérie. Voici comment l'obtenir ou la renouveler simplement.</p>
+
+      <h2>Qu'est-ce que la carte Chifa ?</h2>
+      <p>La carte Chifa (du mot arabe "Chifaa" qui signifie guérison) est une carte à puce qui stocke vos informations médicales et sociales. Elle remplace les anciens carnets de soins papier. Chaque assuré et ses ayants droit disposent de leur propre carte.</p>
+
+      <h2>Qui peut obtenir la carte Chifa ?</h2>
+      <ul>
+        <li>Tous les travailleurs salariés du secteur public et privé (assurés CNAS)</li>
+        <li>Les retraités (CASNOS)</li>
+        <li>Les travailleurs indépendants et non-salariés</li>
+        <li>Les conjoints et enfants à charge de l'assuré principal</li>
+        <li>Les personnes indigentes bénéficiaires de l'aide sociale</li>
+      </ul>
+
+      <h2>Documents nécessaires pour obtenir la carte</h2>
+      <table>
+        <thead><tr><th>Document</th><th>Original</th><th>Copie</th></tr></thead>
+        <tbody>
+          <tr><td>Carte nationale d'identité (CNI)</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Dernière fiche de salaire ou attestation de travail</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Numéro d'immatriculation CNAS</td><td>—</td><td>✓</td></tr>
+          <tr><td>Photo d'identité récente</td><td>2 photos</td><td>—</td></tr>
+          <tr><td>Actes de naissance des enfants (si ayants droit)</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Acte de mariage (pour le conjoint)</td><td>✓</td><td>✓</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Où faire la demande ?</h2>
+      <p>Rendez-vous à l'<strong>agence CNAS (Caisse Nationale des Assurances Sociales)</strong> la plus proche de votre domicile ou de votre lieu de travail. Vous trouverez l'adresse de votre agence sur le site <strong>www.cnas.dz</strong>.</p>
+
+      <div class="info-box">
+        💡 <strong>Délai :</strong> La carte Chifa est généralement délivrée sous <strong>15 à 30 jours</strong> après dépôt du dossier complet. Certaines agences proposent un service accéléré.
+      </div>
+
+      <h2>Comment renouveler la carte Chifa ?</h2>
+      <p>La carte Chifa doit être renouvelée tous les <strong>5 ans</strong>. Pour le renouvellement, il suffit de se présenter à votre agence CNAS avec :</p>
+      <ol>
+        <li>Votre ancienne carte Chifa (même expirée)</li>
+        <li>Votre carte nationale d'identité</li>
+        <li>Une photo d'identité récente</li>
+        <li>Votre dernière fiche de salaire ou attestation CNAS</li>
+      </ol>
+
+      <h2>Comment utiliser la carte Chifa ?</h2>
+      <ul>
+        <li>Chez le médecin : présentez votre carte avant la consultation pour bénéficier du tiers payant</li>
+        <li>En pharmacie : la carte permet le remboursement direct sur les médicaments de la liste nationale</li>
+        <li>À l'hôpital : prise en charge automatique des soins si la carte est valide</li>
+        <li>Pour les analyses médicales : présentez la carte au laboratoire</li>
+      </ul>
+
+      <div class="warning-box">
+        ⚠️ <strong>Important :</strong> Si votre employeur ne cotise pas régulièrement à la CNAS, votre carte Chifa peut être bloquée. Vérifiez régulièrement votre situation sur le site cnas.dz.
+      </div>
+    `
+  },
+
+  'passeport-france': {
+    title: "Renouveler son passeport algérien en France : étapes et documents (2025)",
+    titleAr: "تجديد جواز السفر الجزائري من فرنسا : الخطوات والوثائق (2025)",
+    category: "Diaspora",
+    badgeClass: "badge-green",
+    imgClass: "img-diaspora2",
+    date: "Mis à jour : Mars 2025",
+    readTime: "6 min de lecture",
+    arTitle: "ملخص عربي — تجديد جواز السفر الجزائري من فرنسا",
+    arSummary: "لتجديد جواز سفرك الجزائري من فرنسا، توجه إلى القنصلية الجزائرية في منطقتك. تحتاج إلى جواز سفر منتهي الصلاحية أو قريب من الانتهاء، وبطاقة الإقامة الفرنسية، وصور شخصية. يستغرق التجديد في العادة بين شهر وثلاثة أشهر.",
+    content: `
+      <p>Renouveler son passeport algérien depuis la France est une démarche que de nombreux Algériens de la diaspora doivent effectuer régulièrement. Voici le guide complet et à jour pour 2025.</p>
+
+      <h2>Conditions préalables</h2>
+      <ul>
+        <li>Votre passeport est expiré ou expirera dans les 6 prochains mois</li>
+        <li>Vous résidez légalement en France (titre de séjour ou nationalité française)</li>
+        <li>Vous êtes immatriculé auprès du consulat algérien compétent (selon votre département)</li>
+      </ul>
+
+      <div class="info-box">
+        💡 <strong>Conseil :</strong> Commencez les démarches <strong>4 à 6 mois avant</strong> l'expiration de votre passeport, car les délais peuvent être longs selon la période et le consulat.
+      </div>
+
+      <h2>Documents à fournir</h2>
+      <table>
+        <thead><tr><th>Document</th><th>Précisions</th></tr></thead>
+        <tbody>
+          <tr><td>Passeport algérien actuel</td><td>Original + 2 photocopies (toutes les pages)</td></tr>
+          <tr><td>Acte de naissance (n°12)</td><td>Délivré en Algérie, moins de 6 mois</td></tr>
+          <tr><td>Titre de séjour ou carte de résident</td><td>Original + copie</td></tr>
+          <tr><td>Justificatif de domicile en France</td><td>Facture EDF, eau ou quittance de loyer</td></tr>
+          <tr><td>Photos d'identité biométriques</td><td>4 photos aux normes algériennes (fond blanc)</td></tr>
+          <tr><td>Formulaire de demande</td><td>À retirer ou télécharger sur le site du consulat</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Étapes de la procédure</h2>
+      <ol>
+        <li><strong>Déterminez votre consulat compétent</strong> : en France, il existe plusieurs consulats algériens (Paris, Lyon, Marseille, Nantes, Grenoble...). Votre consulat dépend de votre département de résidence.</li>
+        <li><strong>Prenez rendez-vous en ligne</strong> sur le site du consulat compétent. Certains consulats utilisent la plateforme <strong>visaalgerie.com</strong> ou leurs propres portails.</li>
+        <li><strong>Préparez votre dossier complet</strong> en original et copies selon la liste ci-dessus.</li>
+        <li><strong>Présentez-vous au consulat</strong> à l'heure de votre rendez-vous avec votre dossier.</li>
+        <li><strong>Payez les frais</strong> (variable selon le consulat, généralement entre 40 et 80 €).</li>
+        <li><strong>Récupérez votre passeport</strong> soit en vous déplaçant, soit par courrier selon le consulat.</li>
+      </ol>
+
+      <h2>Délais de traitement</h2>
+      <table>
+        <thead><tr><th>Consulat</th><th>Délai estimé 2025</th></tr></thead>
+        <tbody>
+          <tr><td>Paris</td><td>2 à 4 mois</td></tr>
+          <tr><td>Lyon</td><td>1 à 3 mois</td></tr>
+          <tr><td>Marseille</td><td>2 à 5 mois</td></tr>
+          <tr><td>Nantes</td><td>1 à 2 mois</td></tr>
+          <tr><td>Grenoble</td><td>1 à 3 mois</td></tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        ⚠️ <strong>Attention aux arnaques :</strong> Des individus proposent d'accélérer les démarches contre paiement. Ces offres sont frauduleuses. Ne payez que les frais officiels directement au consulat.
+      </div>
+
+      <h2>Mon passeport expire avant mon rendez-vous : que faire ?</h2>
+      <p>Si vous avez un voyage prévu urgent, contactez directement le consulat pour signaler l'urgence. Certains consulats disposent d'un système de <strong>laissez-passer consulaire</strong> (document de voyage temporaire) pour les cas urgents.</p>
+    `
+  },
+
+  'snmg-2025': {
+    title: "Salaire minimum en Algérie (SNMG 2025) : montant, calcul et droits",
+    titleAr: "الأجر الوطني الأدنى المضمون 2025 : المبلغ وطريقة الحساب والحقوق",
+    category: "Emploi",
+    badgeClass: "badge-teal",
+    imgClass: "img-emploi",
+    date: "Mis à jour : Janvier 2025",
+    readTime: "4 min de lecture",
+    arTitle: "ملخص عربي — الأجر الأدنى 2025",
+    arSummary: "تم رفع الأجر الوطني الأدنى المضمون في الجزائر إلى 24000 دينار جزائري شهرياً ابتداءً من 2025. يسري هذا الأجر على جميع العمال في القطاع الخاص والعام. يشمل الراتب الأساسي مع منح العائلة ومنحة الخبرة.",
+    content: `
+      <p>Le SNMG (Salaire National Minimum Garanti) est le salaire plancher en dessous duquel aucun employeur algérien ne peut rémunérer un employé. Voici tout ce qu'il faut savoir sur son montant en 2025 et vos droits.</p>
+
+      <h2>Montant du SNMG en 2025</h2>
+      <div class="info-box">
+        💰 <strong>SNMG 2025 : 24 000 DA brut par mois</strong><br>
+        Soit environ 104 € au taux officiel, ou environ 102 € au taux marché parallèle.
+      </div>
+
+      <h2>Historique des revalorisations</h2>
+      <table>
+        <thead><tr><th>Année</th><th>Montant SNMG</th><th>Augmentation</th></tr></thead>
+        <tbody>
+          <tr><td>2020</td><td>18 000 DA</td><td>—</td></tr>
+          <tr><td>2021</td><td>20 000 DA</td><td>+11%</td></tr>
+          <tr><td>2023</td><td>20 000 DA</td><td>Inchangé</td></tr>
+          <tr><td>2025</td><td>24 000 DA</td><td>+20%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Qui est concerné par le SNMG ?</h2>
+      <ul>
+        <li>Tous les salariés du secteur privé</li>
+        <li>Les salariés du secteur public (fonction publique)</li>
+        <li>Les travailleurs à temps partiel (au prorata des heures)</li>
+        <li>Les saisonniers et les travailleurs temporaires</li>
+      </ul>
+
+      <div class="warning-box">
+        ⚠️ Attention : les stagiaires et les apprentis peuvent être rémunérés à un taux inférieur au SNMG, mais cela doit être prévu par un contrat de stage ou d'apprentissage officiel.
+      </div>
+
+      <h2>Calcul du salaire net à partir du SNMG</h2>
+      <p>Le salaire net est calculé après déduction des cotisations sociales salariales :</p>
+      <table>
+        <thead><tr><th>Élément</th><th>Taux</th><th>Montant (sur 24 000 DA)</th></tr></thead>
+        <tbody>
+          <tr><td>Salaire brut (SNMG)</td><td>—</td><td>24 000 DA</td></tr>
+          <tr><td>Cotisation CNAS (salarié)</td><td>-9%</td><td>-2 160 DA</td></tr>
+          <tr><td>IRG (impôt sur le revenu)</td><td>Variable</td><td>0 DA (exonéré à ce niveau)</td></tr>
+          <tr><td><strong>Salaire net estimé</strong></td><td>—</td><td><strong>~21 840 DA</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Que faire si votre employeur ne respecte pas le SNMG ?</h2>
+      <ol>
+        <li>Rassemblez les preuves (fiches de paie, contrat de travail)</li>
+        <li>Adressez une réclamation écrite à votre employeur</li>
+        <li>Si aucune réponse, saisissez l'<strong>Inspection du Travail</strong> de votre wilaya</li>
+        <li>Vous pouvez également déposer une plainte auprès du <strong>tribunal social</strong></li>
+      </ol>
+
+      <p>Le non-respect du SNMG est une infraction passible d'amendes pour l'employeur.</p>
+    `
+  },
+
+  'auto-entreprise': {
+    title: "Créer une auto-entreprise en Algérie en 2025 : guide complet (CNRC, étapes, coûts)",
+    titleAr: "كيف تؤسس مؤسسة فردية في الجزائر 2025 : الدليل الكامل",
+    category: "Emploi",
+    badgeClass: "badge-teal",
+    imgClass: "img-emploi2",
+    date: "Mis à jour : Février 2025",
+    readTime: "7 min de lecture",
+    arTitle: "ملخص عربي — تأسيس مؤسسة فردية في الجزائر",
+    arSummary: "لتأسيس مؤسسة فردية في الجزائر، يجب التسجيل في المركز الوطني للسجل التجاري (CNRC) وتسجيل المؤسسة في الضمان الاجتماعي (CASNOS). التكاليف الأولية تتراوح بين 5000 و15000 دينار. يمكن إتمام الإجراءات في أسبوع إلى أسبوعين.",
+    content: `
+      <p>Créer sa propre entreprise en Algérie est devenu plus accessible grâce aux réformes administratives récentes. Que vous souhaitiez lancer une activité commerciale, artisanale ou de services, voici le guide pas-à-pas complet pour 2025.</p>
+
+      <h2>Quel statut choisir ?</h2>
+      <table>
+        <thead><tr><th>Statut</th><th>Pour qui</th><th>Responsabilité</th><th>Capital minimum</th></tr></thead>
+        <tbody>
+          <tr><td>Entreprise individuelle (EI)</td><td>Activité solo, faibles risques</td><td>Illimitée</td><td>Aucun</td></tr>
+          <tr><td>EURL (SARL unipersonnelle)</td><td>Activité solo, protection patrimoine</td><td>Limitée aux apports</td><td>100 000 DA</td></tr>
+          <tr><td>SARL</td><td>Associés multiples</td><td>Limitée aux apports</td><td>100 000 DA</td></tr>
+          <tr><td>SPA (SA)</td><td>Grande entreprise, levée de fonds</td><td>Limitée aux apports</td><td>5 000 000 DA</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        💡 <strong>Pour la plupart des auto-entrepreneurs :</strong> l'entreprise individuelle est le statut le plus simple et le moins coûteux à créer. Recommandé pour démarrer.
+      </div>
+
+      <h2>Étapes de création d'une entreprise individuelle</h2>
+      <ol>
+        <li>
+          <strong>Choisir votre activité</strong> : vérifiez que votre activité n'est pas réglementée ou soumise à autorisation spéciale (pharmacies, cliniques, banques, etc.)
+        </li>
+        <li>
+          <strong>Préparer les documents</strong> : CNI + copie, extrait de naissance (n°12), photo d'identité, justificatif de domicile
+        </li>
+        <li>
+          <strong>Se rendre au CNRC</strong> (Centre National du Registre du Commerce) le plus proche. Depuis 2023, certaines démarches sont disponibles en ligne sur <strong>portail.cnrc.dz</strong>
+        </li>
+        <li>
+          <strong>Remplir le formulaire d'immatriculation</strong> et déposer votre dossier
+        </li>
+        <li>
+          <strong>Payer les frais d'immatriculation</strong> (voir tableau ci-dessous)
+        </li>
+        <li>
+          <strong>Obtenir votre Registre de Commerce</strong> (RC) sous 3 à 7 jours ouvrables
+        </li>
+        <li>
+          <strong>S'immatriculer à la CASNOS</strong> (sécurité sociale des non-salariés) avec votre RC
+        </li>
+        <li>
+          <strong>Ouvrir un compte bancaire professionnel</strong> (obligatoire pour certaines activités)
+        </li>
+      </ol>
+
+      <h2>Coûts de création en 2025</h2>
+      <table>
+        <thead><tr><th>Frais</th><th>Montant estimé</th></tr></thead>
+        <tbody>
+          <tr><td>Immatriculation CNRC</td><td>3 500 – 7 000 DA</td></tr>
+          <tr><td>Droits de timbre</td><td>500 – 1 000 DA</td></tr>
+          <tr><td>Légalisation de documents</td><td>500 – 1 500 DA</td></tr>
+          <tr><td>Première cotisation CASNOS</td><td>~6 000 DA/trimestre</td></tr>
+          <tr><td><strong>Total estimé démarrage</strong></td><td><strong>10 000 – 15 000 DA</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Obligations fiscales après création</h2>
+      <ul>
+        <li>Tenir un registre des recettes et dépenses</li>
+        <li>Déclarer et payer l'IFU (Impôt Forfaitaire Unique) si chiffre d'affaires < 30 M DA</li>
+        <li>Cotiser à la CASNOS chaque trimestre</li>
+        <li>Renouveler le registre de commerce annuellement</li>
+      </ul>
+
+      <div class="warning-box">
+        ⚠️ <strong>À éviter :</strong> exercer une activité commerciale sans registre de commerce est sanctionné par des amendes et peut mener à la fermeture de l'établissement.
+      </div>
+    `
+  },
+
+  'transfert-argent': {
+    title: "Envoyer de l'argent en Algérie depuis la France : comparatif complet 2025",
+    titleAr: "كيف ترسل المال من فرنسا إلى الجزائر : مقارنة شاملة 2025",
+    category: "Diaspora",
+    badgeClass: "badge-green",
+    imgClass: "img-economie",
+    date: "Mis à jour : Janvier 2025",
+    readTime: "5 min de lecture",
+    arTitle: "ملخص عربي — إرسال المال من فرنسا إلى الجزائر",
+    arSummary: "يمكنك إرسال المال إلى الجزائر من فرنسا عبر عدة طرق: Western Union، Money Gram، التحويل البنكي، أو Algérie Poste. أفضل الخيارات من حيث التكلفة تختلف حسب المبلغ والسرعة المطلوبة.",
+    content: `
+      <p>Envoyer de l'argent vers l'Algérie depuis la France est une démarche très courante pour la diaspora algérienne. Les options sont nombreuses mais leurs coûts et délais varient considérablement. Voici le comparatif complet et honnête pour 2025.</p>
+
+      <h2>Comparatif des principales solutions</h2>
+      <table>
+        <thead><tr><th>Service</th><th>Frais (sur 500 €)</th><th>Taux de change</th><th>Délai</th><th>Mode de retrait</th></tr></thead>
+        <tbody>
+          <tr><td>Western Union</td><td>~8 – 12 €</td><td>Officiel</td><td>Quelques minutes</td><td>Espèces, compte bancaire</td></tr>
+          <tr><td>MoneyGram</td><td>~7 – 11 €</td><td>Officiel</td><td>Quelques minutes</td><td>Espèces, compte bancaire</td></tr>
+          <tr><td>Virement SWIFT</td><td>10 – 25 €</td><td>Officiel</td><td>2 à 5 jours ouvrés</td><td>Compte bancaire</td></tr>
+          <tr><td>Wise (TransferWise)</td><td>3 – 7 €</td><td>Officiel proche marché</td><td>1 à 3 jours</td><td>Compte bancaire</td></tr>
+          <tr><td>Algérie Poste (CCP)</td><td>Gratuit entre CCP</td><td>Officiel</td><td>1 à 3 jours</td><td>Retrait guichet Poste</td></tr>
+          <tr><td>Remise en main propre</td><td>0 (mais risque)</td><td>Marché parallèle</td><td>Immédiat</td><td>Espèces</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        💡 <strong>Notre recommandation :</strong> Pour les petits montants (<500 €), Western Union ou MoneyGram restent pratiques grâce à leur réseau étendu en Algérie. Pour les gros montants, un virement SWIFT ou Wise est plus économique.
+      </div>
+
+      <h2>Western Union — Mode d'emploi</h2>
+      <ol>
+        <li>Créez un compte sur <strong>westernunion.com</strong> ou l'application mobile</li>
+        <li>Sélectionnez "Envoyer vers l'Algérie"</li>
+        <li>Entrez le montant et choisissez le mode de retrait (espèces ou virement)</li>
+        <li>Renseignez les coordonnées du bénéficiaire (nom, prénom, CNIB)</li>
+        <li>Payez par carte bancaire ou virement</li>
+        <li>Transmettez le code MTCN au bénéficiaire en Algérie</li>
+      </ol>
+
+      <h2>Où retirer l'argent en Algérie ?</h2>
+      <ul>
+        <li><strong>Western Union :</strong> Plus de 600 points de retrait en Algérie (Algérie Poste, banques agréées, bureaux de change)</li>
+        <li><strong>MoneyGram :</strong> Disponible dans les agences CPA, BDL et bureaux Poste</li>
+        <li><strong>Virement SWIFT :</strong> Directement sur le compte bancaire du bénéficiaire</li>
+        <li><strong>Algérie Poste (CCP) :</strong> Dans toutes les agences postales du pays</li>
+      </ul>
+
+      <h2>Limites légales de transfert</h2>
+      <table>
+        <thead><tr><th>Service</th><th>Limite par transaction</th><th>Limite mensuelle</th></tr></thead>
+        <tbody>
+          <tr><td>Western Union (en ligne)</td><td>2 999 €</td><td>Selon profil</td></tr>
+          <tr><td>Virement SWIFT</td><td>Illimité (justificatifs requis au-delà de 10 000 €)</td><td>—</td></tr>
+          <tr><td>Wise</td><td>Variable selon vérification</td><td>Selon niveau de vérification</td></tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        ⚠️ <strong>Déclaration obligatoire :</strong> Tout transfert de fonds supérieur à 10 000 € vers l'étranger doit être déclaré aux autorités douanières françaises (Tracfin). Le non-respect de cette obligation est sanctionné pénalement.
+      </div>
+
+      <h2>Astuce pour économiser sur les frais</h2>
+      <ul>
+        <li>Comparez les taux sur <strong>monito.com</strong> avant chaque transfert</li>
+        <li>Évitez les transferts en espèces dans les agences (plus chers)</li>
+        <li>Regroupez plusieurs petits transferts en un seul gros transfert mensuel</li>
+        <li>Profitez des offres promotionnelles Western Union (premiers transferts gratuits)</li>
+      </ul>
+    `
+  }
+
+};
+
+</script>
+</body>
+</html>
